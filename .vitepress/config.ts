@@ -10,7 +10,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: '/kpuvicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
     ['meta', { 'http-equiv': 'Expires', 'content': '0' }],
     ['meta', { 'http-equiv': 'Pragma', 'content': 'no-cache' }],
     ['meta', { 'http-equiv': 'Cache-control', 'content': 'no-cache' }],
