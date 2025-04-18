@@ -77,10 +77,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             text: '地址',
             link: 'https://kpu-admin.github.io/kpu-example',
           },
-          {
-            text: '备用地址',
-            link: 'https://kpu-admin.pages.dev/kpu-example',
-          },
+          // {
+          //   text: '备用地址',
+          //   link: 'https://kpu-admin.pages.dev/kpu-example',
+          // },
         ],
       },
       {
