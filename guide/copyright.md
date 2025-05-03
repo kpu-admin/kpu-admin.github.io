@@ -65,7 +65,7 @@ const globalSettings: Settings.all = {
      * 网站地址
      * @默认值 `''`
      */
-    website: 'https://kpu-admin.github.io',
+    website: 'https://kpu-admin.kpui.top',
   },
 }
 ```

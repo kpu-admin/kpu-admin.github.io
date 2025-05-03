@@ -131,6 +131,6 @@ pnpm remove element-plus
 
 ## 示例
 
-如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/kpu-admin/arco-example)查看示例源码，以及[此链接](https://kpu-admin.github.io/arco-example/)查看示例网站。
+如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/kpu-admin/arco-example)查看示例源码，以及[此链接](https://kpu-admin.kpui.top/arco-example/)查看示例网站。
 
 ![](/ui-arco.png){data-zoomable}

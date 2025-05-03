@@ -5,7 +5,7 @@ const isVisible = ref(false)
 const nameStorage = 'ACTIVITY-KPU-MOBILE-1'
 
 function go() {
-  window.location.href = 'https://kpu-mobile.github.io/'
+  window.location.href = 'https://kpu-mobile.kpui.top/'
 }
 
 function closeBanner() {

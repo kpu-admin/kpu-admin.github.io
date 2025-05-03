@@ -16,7 +16,7 @@ import { withBase } from 'vitepress'
 
     `Kpu-admin 开箱即用的管理系统框架`
 
-    `https://kpu-admin.github.io`
+    `https://kpu-admin.kpui.top`
 
 3. 在你的产品官网里加上 Kpu-admin 的友链，参考上方介绍和链接
 

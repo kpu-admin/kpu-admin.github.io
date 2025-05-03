@@ -23,7 +23,7 @@ hero:
       link: /guide/changelog
     - theme: cta
       text: 演示地址 ↗
-      link: https://kpu-admin.github.io/kpu-example
+      link: https://kpu-admin.kpui.top/kpu-example
 
 features:
 - icon: 💪

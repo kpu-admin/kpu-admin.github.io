@@ -63,7 +63,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             items: [
               // {
               //   text: 'v4 (Vue3版本)',
-              //   link: 'https://kpu-admin.github.io/v4-docs/',
+              //   link: 'https://kpu-admin.kpui.top/v4-docs/',
               // },
 
             ],
@@ -75,7 +75,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         items: [
           {
             text: '地址',
-            link: 'https://kpu-admin.github.io/kpu-example',
+            link: 'https://kpu-admin.kpui.top/kpu-example',
           },
           {
             text: '备用地址',

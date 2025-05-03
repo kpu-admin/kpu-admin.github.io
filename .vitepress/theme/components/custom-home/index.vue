@@ -110,7 +110,7 @@ function open(url: string) {
           </Button2>
         </div>
         <div class="w-full flex flex-wrap items-center justify-center gap-4">
-          <Button3 @click="open('https://kpu-admin.github.io/kpu-example')">
+          <Button3 @click="open('https://kpu-admin.kpui.top/kpu-example')">
             演示
           </Button3>
         </div>
