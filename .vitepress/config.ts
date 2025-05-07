@@ -112,10 +112,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: 'https://form-create.com',
           },
           {
-            text: 'QuickAdmin 快速开发管理框架',
-            link: 'https://gitee.com/sciqtw/quickadmin',
-          },
-          {
             text: 'Vexip UI 组件库',
             link: 'https://www.vexipui.com/zh-CN',
           },
@@ -271,6 +267,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'KpuFlipWords 翻转文字', link: '/components/kpu-flip-words' },
             { text: 'KpuGlowyCard 发光卡片', link: '/components/kpu-glowy-card' },
             { text: 'KpuGradientButton 渐变按钮', link: '/components/kpu-gradient-button' },
+            { text: 'KpuHoverCard 悬浮卡片', link: '/components/kpu-hover-card' },
             { text: 'KpuIcon 图标', link: '/components/kpu-icon' },
             { text: 'KpuIconPicker 图标选择器', link: '/components/kpu-icon-picker' },
             { text: 'KpuInput 输入框', link: '/components/kpu-input' },
@@ -302,6 +299,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'KpuTabs 标签页', link: '/components/kpu-tabs' },
             { text: 'KpuTextHighlight 文字高亮', link: '/components/kpu-text-highlight' },
             { text: 'KpuTimeAgo 可阅读时间', link: '/components/kpu-time-ago' },
+            { text: 'KpuTimeline 时间线', link: '/components/kpu-timeline' },
             { text: 'KpuTooltip 文字提示', link: '/components/kpu-tooltip' },
             { text: 'KpuToast 轻提示', link: '/components/kpu-toast' },
             { text: 'KpuTrend 趋势标记', link: '/components/kpu-trend' },
