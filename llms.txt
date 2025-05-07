@@ -1,0 +1,163 @@
+# Kpu-admin
+
+> 杰出的管理系统框架
+
+开箱即用，提供舒适开发体验
+
+## Table of Contents
+
+### 指引
+
+- [文档说明](/guide/intro.md)
+- [为什么选择我们 ?](/guide/why.md)
+- [更新日志](/guide/changelog.md)
+
+### 入门
+
+- [准备工作](/guide/ready.md)
+- [开始](/guide/start.md)
+- [代码规范](/guide/coding-standard.md)
+- [术语](/guide/term.md)
+- [配置](/guide/configure.md)
+- [开发者工具](/guide/devtools.md)
+- [路由（导航）](/guide/router.md)
+- [与服务端交互](/guide/axios.md)
+- [全局状态管理](/guide/store.md)
+- [资源](/guide/resources.md)
+- [图标](/guide/icon.md)
+- [构建与预览](/guide/build.md)
+
+### 进阶
+
+- [登录相关](/guide/login.md)
+- [权限](/guide/permission.md)
+- [主页](/guide/home.md)
+- [布局](/guide/layout.md)
+- [主题](/guide/theme.md)
+- [动态标题](/guide/title.md)
+- [导航菜单](/guide/menu.md)
+- [顶栏](/guide/topbar.md)
+- [快捷键](/guide/hotkeys.md)
+- [版权信息](/guide/copyright.md)
+
+#### 顶栏
+
+- [标签栏](/guide/tabbar.md)
+- [工具栏](/guide/toolbar.md)
+
+### 高级
+
+- [页面缓存](/guide/keep-alive.md)
+- [国际化](/guide/i18n.md)
+- [预留插槽](/guide/slots.md)
+- [RTL 模式](/guide/rtl.md)
+- [代码文件自动生成](/guide/plop.md)
+- [标准模块](/guide/plop-module.md)
+- [常用 API](/guide/api.md)
+- [私有 Storage 数据](/guide/storage.md)
+- [首屏 Loading](/guide/loading.md)
+- [页面水印](/guide/watermark.md)
+- [检查更新](/guide/check-updates.md)
+- [错误日志](/guide/error-log.md)
+- [自定义字体](/guide/font.md)
+- [用户偏好设置](/guide/preferences.md)
+- [JSX](/guide/jsx.md)
+- [基于文件系统的路由](/guide/file-system-route.md)
+- [使用 Composition API 开发](/guide/vue3-composition-api.md)
+
+#### 替换 UI 组件库
+
+- [替换为 Ant Design Vue](/guide/replace-to-antd.md)
+- [替换为 Arco Design Vue](/guide/replace-to-arco.md)
+- [替换为 Naive UI](/guide/replace-to-naive.md)
+- [替换为 TDesign](/guide/replace-to-tdesign.md)
+- [替换为 Vexip UI](/guide/replace-to-vexip.md)
+- [替换为 iDux](/guide/replace-to-idux.md)
+
+### 其它
+
+- [框架更新](/guide/upgrade.md)
+- [从 vue-element-admin 迁移](/guide/vea-to-fa.md)
+- [常见问题](/guide/q-a.md)
+
+### 组件
+
+- [介绍](/components.md)
+
+### 内建组件
+
+- [KpuAnimatedBeam 动画光束](/components/kpu-animated-beam.md)
+- [KpuAnimatedCountTo 动画计数](/components/kpu-animated-count-to.md)
+- [KpuAuth 鉴权](/components/kpu-auth.md)
+- [KpuAvatar 头像](/components/kpu-avatar.md)
+- [KpuBadge 徽章](/components/kpu-badge.md)
+- [KpuBlurReveal 模糊显示](/components/kpu-blur-reveal.md)
+- [KpuButton 按钮](/components/kpu-button.md)
+- [KpuCard 卡片](/components/kpu-card.md)
+- [KpuCarousel 轮播图](/components/kpu-carousel.md)
+- [KpuCheckbox 复选框](/components/kpu-checkbox.md)
+- [KpuCodePreview 代码预览](/components/kpu-code-preview.md)
+- [KpuCode 代码块](/components/kpu-code.md)
+- [KpuCountTo 计数到](/components/kpu-count-to.md)
+- [KpuDigitalCard 数字卡片](/components/kpu-digital-card.md)
+- [KpuDivider 分割线](/components/kpu-divider.md)
+- [KpuDrawer 抽屉](/components/kpu-drawer.md)
+- [KpuDropdown 下拉菜单](/components/kpu-dropdown.md)
+- [KpuFixedActionBar 固定底部操作栏](/components/kpu-fixed-action-bar.md)
+- [KpuFlipCard 翻转卡片](/components/kpu-flip-card.md)
+- [KpuFlipWords 翻转文字](/components/kpu-flip-words.md)
+- [KpuGlowyCard 发光卡片](/components/kpu-glowy-card.md)
+- [KpuGradientButton 渐变按钮](/components/kpu-gradient-button.md)
+- [KpuHoverCard 悬浮卡片](/components/kpu-hover-card.md)
+- [KpuIcon 图标](/components/kpu-icon.md)
+- [KpuIconPicker 图标选择器](/components/kpu-icon-picker.md)
+- [KpuInput 输入框](/components/kpu-input.md)
+- [KpuInteractiveButton 交互式按钮](/components/kpu-interactive-button.md)
+- [KpuKbd 键盘](/components/kpu-kbd.md)
+- [KpuLayoutContainer 布局容器](/components/kpu-layout-container.md)
+- [KpuLinkPreview 链接预览](/components/kpu-link-preview.md)
+- [KpuLoading 加载遮罩](/components/kpu-loading.md)
+- [KpuMarquee 跑马灯](/components/kpu-marquee.md)
+- [KpuModal 弹窗](/components/kpu-modal.md)
+- [KpuPageHeader 页头](/components/kpu-page-header.md)
+- [KpuPageMain 内容块](/components/kpu-page-main.md)
+- [KpuPagination 分页](/components/kpu-pagination.md)
+- [KpuParticlesBg 粒子背景](/components/kpu-particles-bg.md)
+- [KpuPasswordStrength 密码强度](/components/kpu-password-strength.md)
+- [KpuPatternBg 图案背景](/components/kpu-pattern-bg.md)
+- [KpuPinInput 数字输入框](/components/kpu-pin-input.md)
+- [KpuPopover 浮动面板](/components/kpu-popover.md)
+- [KpuScratchOff 刮刮乐](/components/kpu-scratch-off.md)
+- [KpuScrollArea 滚动区域](/components/kpu-scroll-area.md)
+- [SearchBar 搜索面板](/components/kpu-search-bar.md)
+- [Select 选择器](/components/kpu-select.md)
+- [Slider 滑块](/components/kpu-slider.md)
+- [KpuSparklesText 闪烁文字](/components/kpu-sparkles-text.md)
+- [KpuSparkline 迷你图](/components/kpu-sparkline.md)
+- [KpuSpotlightCard 聚光卡片](/components/kpu-spotlight-card.md)
+- [KpuStorageBox 储物箱](/components/kpu-storage-box.md)
+- [KpuSwitch 开关](/components/kpu-switch.md)
+- [KpuTabs 标签页](/components/kpu-tabs.md)
+- [KpuTextHighlight 文字高亮](/components/kpu-text-highlight.md)
+- [KpuTimeAgo 可阅读时间](/components/kpu-time-ago.md)
+- [KpuTimeline 时间线 &#x20;](/components/kpu-timeline.md)
+- [KpuTooltip 文字提示](/components/kpu-tooltip.md)
+- [KpuToast 轻提示](/components/kpu-toast.md)
+- [KpuTrend 趋势标记](/components/kpu-trend.md)
+
+### 扩展组件
+
+- [ImageUpload 单图上传](/components/image-upload.md)
+- [ImagesUpload 多图上传](/components/images-upload.md)
+- [FileUpload 文件上传](/components/file-upload.md)
+- [ImagePreview 图片预览](/components/image-preview.md)
+- [PcasCascader 省市区街道联动](/components/pcas-cascader.md)
+
+- [定制开发](/customize.md)
+- [技术支持](/support.md)
+- [交换友链](/links.md)
+
+### Other
+
+- [Kpu-admin](/index.md)
+- [KpuBorderBeam 边框光束](/components/kpu-border-beam.md)
