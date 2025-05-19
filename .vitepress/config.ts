@@ -88,7 +88,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         link: '/support',
       },
       {
-        text: '下载 / 购买',
+        text: '下载 / 定制开发',
         items: [
           {
             text: '下载',
