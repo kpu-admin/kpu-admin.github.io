@@ -8,6 +8,4 @@
 [![star](https://gitee.com/Kpu-admin/web/badge/star.svg?theme=dark)](https://gitee.com/Kpu-admin/web)
 :::
 
-文档中标记 的地方，表示该功能仅提供于专业版使用，使用基础版的开发者可直接跳过阅读。
-
 如果你准备好了，那我们就[开始](/guide/ready)吧~
