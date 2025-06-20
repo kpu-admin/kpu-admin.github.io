@@ -72,7 +72,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { merge } from 'es-toolkit'
 import { locales } from './index'
 

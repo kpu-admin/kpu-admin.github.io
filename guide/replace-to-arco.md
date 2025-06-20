@@ -63,7 +63,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { locales } from './index'
 
 const settingsStore = useSettingsStore()

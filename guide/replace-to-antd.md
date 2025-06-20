@@ -64,7 +64,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { theme } from 'ant-design-vue'
 import { locales } from './index'
 

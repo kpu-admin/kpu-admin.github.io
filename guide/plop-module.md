@@ -144,14 +144,14 @@ function onEdit(row: any) {
 然后打开 `detail.vue` 文件，替换以下两处：
 
 ```vue-html {1}
-<PageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
+<KaPageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
   <ElButton size="default" round @click="goBack">
     <template #icon>
       <KpuIcon name="i-ep:arrow-left" />
     </template>
     返回
   </ElButton>
-</PageHeader>
+</KaPageHeader>
 ```
 
 ```ts {3,6}

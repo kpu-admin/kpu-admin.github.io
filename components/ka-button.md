@@ -1,6 +1,8 @@
-# KpuButton 按钮
+# KaButton 按钮
 
-## Props
+包含 `KaButton` 和 `KaButtonGroup` 两个组件。
+
+## `KaButton` Props
 
 | 属性名   | 说明       | 类型                                                                          | 默认值      |
 | -------- | ---------- | ----------------------------------------------------------------------------- | ----------- |
@@ -10,7 +12,19 @@
 | disabled | 是否禁用   | `boolean`                                                                     | `false`     |
 | loading  | 是否加载中 | `boolean`                                                                     | `false`     |
 
-## Slots
+## `KaButton` Slots
+
+| 插槽名  | 说明           |
+| ------- | -------------- |
+| default | 自定义默认内容 |
+
+## `KaButtonGroup` Props
+
+| 属性名   | 说明     | 类型      | 默认值  |
+| -------- | -------- | --------- | ------- |
+| vertical | 是否垂直 | `boolean` | `false` |
+
+## `KaButtonGroup` Slots
 
 | 插槽名  | 说明           |
 | ------- | -------------- |

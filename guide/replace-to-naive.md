@@ -68,7 +68,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { darkTheme } from 'naive-ui'
 import { locales } from './index'
 
