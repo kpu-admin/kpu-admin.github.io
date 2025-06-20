@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,ax as s}from"./chunks/framework.CtegKsnz.js";const _=JSON.parse('{"title":"文档说明","description":"","frontmatter":{},"headers":[],"relativePath":"guide/intro.md","filePath":"guide/intro.md"}'),i={name:"guide/intro.md"};function o(n,t,p,d,l,c){return r(),a("div",null,t[0]||(t[0]=[s("",3)]))}const u=e(i,[["render",o]]);export{_ as __pageData,u as default};
