@@ -33,7 +33,7 @@ const globalSettings: Settings.all = {
   home: {
     /**
      * 主页名称，可直接设置名称，专业版支持设置为 i18n 的 key
-     * @默认值 基础版为 `'主页'`，专业版为 `'app.route.home'`
+     * @默认值 `'app.route.home'`
      */
     title: '主页',
   },
@@ -91,65 +91,7 @@ const systemRoutes: RouteRecordRaw[] = [
 下面是一个补充完整的例子：
 
 :::: tabs
-::: tab 基础版
-在 `src/router/routes.ts` 中增加：
-
-```ts {3-10}
-// 固定路由（默认路由）
-const constantRoutes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    name: 'index',
-    component: () => import('@/views/new_page.vue'), // 记得手动新建这个文件
-    meta: {
-      title: '首页',
-    },
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/login.vue'),
-    meta: {
-      title: '登录',
-    },
-  },
-  ...
-]
-```
-
-然后在 `src/router/index.ts` 中修改：
-
-```ts
-router.beforeEach(async (to, from, next) => {
-  const settingsStore = useSettingsStore()
-  const userStore = useUserStore()
-  const routeStore = useRouteStore()
-  const menuStore = useMenuStore()
-  settingsStore.settings.app.enableProgress && (isLoading.value = true)
-  // 是否已登录
-  if (userStore.isLogin) {
-    ...
-  }
-  else {
-    if (to.name !== 'login') { // [!code --]
-    if (to.name !== 'login' && to.name !== 'index') { // [!code ++]
-      next({
-        name: 'login',
-        query: {
-          redirect: to.fullPath !== settingsStore.settings.home.fullPath ? to.fullPath : undefined,
-        },
-      })
-    }
-    else {
-      next()
-    }
-  }
-})
-```
-
-现在就可以通过 `http://localhost:9000/#/` 访问新创建的这个页面了，并且无需登录。
-:::
-::: tab 专业版
+::: tab 代码
 在 `src/router/routes.ts` 中增加：
 
 ```ts {3-11}

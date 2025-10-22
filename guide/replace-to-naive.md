@@ -16,59 +16,7 @@ pnpm add naive-ui -D
 
 ## 代码调整
 
-::: details 基础版
-
-修改 `/tsconfig.app.json` 文件
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "types": [
-      ...
-      "element-plus/global" // [!code --]
-      "naive-ui/volar" // [!code ++]
-    ],
-    ...
-  }
-}
-```
-
-整体修改 `/src/ui/provider/index.ts` 文件
-
-```ts
-import type { App } from 'vue'
-import naive from 'naive-ui'
-
-function install(app: App) {
-  app.use(naive)
-}
-
-export default { install }
-```
-
-整体修改 `/src/ui/provider/index.vue` 文件
-
-```vue
-<script setup lang="ts">
-import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
-
-const settingsStore = useSettingsStore()
-</script>
-
-<template>
-  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.currentColorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
-    <NMessageProvider>
-      <slot />
-      <NGlobalStyle />
-    </NMessageProvider>
-  </NConfigProvider>
-</template>
-```
-
-:::
-
-::: details 专业版
+::: details 代码
 
 修改 `/tsconfig.app.json` 文件
 
@@ -162,6 +110,6 @@ pnpm remove element-plus
 
 ## 示例
 
-如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/kpu-admin/naive-example)查看示例源码，以及[此链接](https://kpu-admin.kpui.top/naive-example/)查看示例网站。
+如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/kpu-admin/web/tree/naive-example)查看示例源码，以及[此链接](https://kpu-admin.kpui.top/naive-example/)查看示例网站。
 
 ![](/ui-naive.png){data-zoomable}

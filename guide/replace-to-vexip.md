@@ -16,57 +16,7 @@ pnpm add vexip-ui
 
 ## 代码调整
 
-::: details 基础版
-
-修改 `/tsconfig.app.json` 文件
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "types": [
-      ...
-      "element-plus/global" // [!code --]
-    ],
-    ...
-  }
-}
-```
-
-整体修改 `/src/ui/provider/index.ts` 文件
-
-```ts
-import type { App } from 'vue'
-import { install as vexipInstall } from 'vexip-ui'
-import 'vexip-ui/css/index.css'
-import 'vexip-ui/css/dark/index.css'
-
-function install(app: App) {
-  app.use(vexipInstall, {
-    prefix: 'vxp',
-  })
-}
-
-export default { install }
-```
-
-整体修改 `/src/ui/provider/index.vue` 文件
-
-```vue
-<script setup lang="ts">
-import { zhCNLocale } from 'vexip-ui'
-</script>
-
-<template>
-  <VxpConfigProvider :locale="zhCNLocale()">
-    <slot />
-  </VxpConfigProvider>
-</template>
-```
-
-:::
-
-::: details 专业版
+::: details 代码
 
 修改 `/tsconfig.app.json` 文件
 
@@ -150,6 +100,6 @@ pnpm remove element-plus
 
 ## 示例
 
-如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/kpu-admin/vexip-example)查看示例源码，以及[此链接](https://kpu-admin.kpui.top/vexip-example/)查看示例网站。
+如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/kpu-admin/web/tree/vexip-example)查看示例源码，以及[此链接](https://kpu-admin.kpui.top/vexip-example/)查看示例网站。
 
 ![](/ui-vexip.png){data-zoomable}

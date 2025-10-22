@@ -87,7 +87,7 @@ VITE_BUILD_ARCHIVE =
 关于配置的类型定义，可以在 `/src/types/globals.d.ts` 文件中查阅。
 
 ```ts
-// 这是基础版演示源码里的自定义配置示例
+// 这是演示源码里的自定义配置示例
 const globalSettings: Settings.all = {
   app: {
     enablePermission: true,
