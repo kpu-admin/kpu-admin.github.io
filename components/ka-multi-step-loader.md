@@ -10,9 +10,9 @@
 
 ```ts
 interface Step {
-  text: string // 步骤文本
-  afterText?: string // 步骤完成后的文本
-  name?: string // 步骤返回数据对象名称
-  action?: (context: StepContext) => Promise<any> // 步骤执行的函数
+    text: string // 步骤文本
+    afterText?: string // 步骤完成后的文本
+    name?: string // 步骤返回数据对象名称
+    action?: (context: StepContext) => Promise<any> // 步骤执行的函数
 }
 ```

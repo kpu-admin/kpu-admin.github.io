@@ -1,5 +1,4 @@
-# KpuPagination 分页
-
+# KaPagination 分页
 ## Props
 
 | 属性名 | 说明     | 类型     | 默认值 |

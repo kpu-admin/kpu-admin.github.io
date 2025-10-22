@@ -1,4 +1,8 @@
-# ImagePreview 图片预览
+# ImagePreview 图片预览 <Badge type="danger" text="弃用" />
+
+:::danger 注意
+该组件已弃用，请使用 `FaImagePreview` 组件。
+:::
 
 ## Props
 

@@ -64,7 +64,7 @@ Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文�
 <template>
   <div>
     这样就没问题啦
-  <div>
+    <div>
 </template>
 ```
 
@@ -98,7 +98,7 @@ Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文�
 
 ```js
 window.globalConfig = {
-  API_BASEURL: '/',
+    API_BASEURL: '/',
 }
 ```
 
@@ -106,9 +106,9 @@ window.globalConfig = {
 
 ```html
 <body>
-  ...
-  <script src="/config.js"></script> // [!code ++]
-  <script type="module" src="/src/main.ts"></script>
+...
+<script src="/config.js"></script> <!-- [!code ++] -->
+<script type="module" src="/src/main.ts"></script>
 </body>
 ```
 
@@ -116,10 +116,10 @@ window.globalConfig = {
 
 ```ts
 const api = axios.create({
-  baseURL: (import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true') ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL, // [!code --]
-  baseURL: (import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true') ? '/proxy/' : (import.meta.env.DEV ? import.meta.env.VITE_APP_API_BASEURL : (window as any).globalConfig.API_BASEURL), // [!code ++]
-  timeout: 1000 * 60,
-  responseType: 'json',
+    baseURL: (import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true') ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL, // [!code --]
+    baseURL: (import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true') ? '/proxy/' : (import.meta.env.DEV ? import.meta.env.VITE_APP_API_BASEURL : (window as any).globalConfig.API_BASEURL), // [!code ++]
+    timeout: 1000 * 60,
+    responseType: 'json',
 })
 ```
 

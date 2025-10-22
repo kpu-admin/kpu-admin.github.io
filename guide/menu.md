@@ -2,7 +2,7 @@
 
 ## 模式
 
-提供 7 种导航栏模式，其中后 4 种为 才有，在应用配置中设置：
+提供 7 种导航栏模式，其中后 4 种为才有，在应用配置中设置：
 
 ```ts {2-14}
 const globalSettings: Settings.all = {
@@ -208,13 +208,13 @@ const globalSettings: Settings.all = {
 
 ```ts {2-8}
 const globalSettings: Settings.all = {
-  menu: {
-    /**
-     * 次导航是否自动收起
-     * @默认值 `false`
-     */
-    subMenuAutoCollapse: true,
-  },
+    menu: {
+        /**
+         * 次导航是否自动收起
+         * @默认值 `false`
+         */
+        subMenuAutoCollapse: true,
+    },
 }
 ```
 

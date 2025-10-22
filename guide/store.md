@@ -6,7 +6,7 @@
 - [欧耶！Pinia 正式成为 vuejs 的一员](https://mp.weixin.qq.com/s/_OlLFedVJfyEapGzYFETuw)
 - [全新的 Vue3 状态管理工具：Pinia](https://mp.weixin.qq.com/s/4B-ZzOXdYrF-Auvm_wWBVQ)
 - [【探索学习】面向未来的 Vuex -- pinia](https://www.bilibili.com/video/BV1Mb4y1X7NL/)
-:::
+  :::
 
 全局状态文件存放在 `/src/store/modules/` 目录下，请按模块进行区分。同时请保证文件名和文件内唯一ID保持一致，建议使用 `pnpm new` 指令进行创建。
 
@@ -14,15 +14,15 @@
 
 ```ts
 export const useExampleStore = defineStore(
-  // 唯一ID
-  'example',
-  () => {
-    const someThing = ref(0)
+    // 唯一ID
+    'example',
+    () => {
+        const someThing = ref(0)
 
-    return {
-      someThing,
-    }
-  },
+        return {
+            someThing,
+        }
+    },
 )
 ```
 

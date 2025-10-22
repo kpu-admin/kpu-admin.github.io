@@ -1,6 +1,6 @@
 # 替换为 iDux
 
-由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [iDux](https://idux.site/)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/Kpu-admin/web/releases) 页面下载框架源码压缩包。
+由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [iDux](https://idux.site/)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/kpu-admin/web/releases) 页面下载框架源码压缩包。
 
 专业版用户也同样，请到专业版仓库下载框架源码。
 
@@ -88,10 +88,6 @@ watch(() => settingsStore.lang, val => setLocale(locales[settingsStore.lang]))
 │  └─ module // 标准模块模板基于 Element Plus 开发，需要删除
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
-     ├─ FileUpload
-     ├─ ImagePreview
-     ├─ ImagesUpload
-     ├─ ImageUpload
      └─ PcasCascader
 ```
 

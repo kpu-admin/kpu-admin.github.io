@@ -4,11 +4,11 @@
 
 提供 2 种基于页宽(页面宽度)模式，在应用配置中设置：
 
-```ts {2-11}
+```ts {2-9}
 const globalSettings: Settings.all = {
   layout: {
     /**
-      * 页宽模式，当设置为 `'center'` 时，可以去 /src/assets/styles/globals.css 里设置 `--g-app-width` 宽度变量
+     * 页宽模式，当设置为 `'center'` 时，可以去 /src/assets/styles/globals.css 里设置 `--g-app-width` 宽度变量
      * @默认值 `'adaption'` 自适应
      * @可选值 `'center'` 定宽居中
      */
@@ -69,3 +69,10 @@ const globalSettings: Settings.all = {
 
 虽然框架本身兼容移动端，但由于后台系统在开发时可能会引用各类第三方插件，这部分的兼容性需要开发者自行适配。
 
+:::tip 建议
+由于后台系统属于生产效率工具，而移动端天生不适合复杂的操作，尤其是遇到一些比较复杂的表单，在移动端上操作是极其“恼火”的。
+
+依据作者的开发经验，建议移动端后台可以独立开发一套，在功能上进行删减，保留轻量级的管理操作。
+
+如果打算独立开发一套移动端的系统，建议使用 [Kpu-mobile](https://kpu-mobile.kpui.top/)。
+:::

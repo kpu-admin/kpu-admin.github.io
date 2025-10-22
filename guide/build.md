@@ -18,14 +18,14 @@
 
 在环境配置文件里设置 `VITE_BUILD_COMPRESS` 即可在构建时生成 `.gz` 或 `.br` 文件。
 
-```
+```yaml
 # 单独开启 gzip
 VITE_BUILD_COMPRESS = gzip
 
-# 单独开启 brotli ，brotli 是比 gzip 压缩率更高的算法
+  # 单独开启 brotli ，brotli 是比 gzip 压缩率更高的算法
 VITE_BUILD_COMPRESS = brotli
 
-# 或者也可以都开启，两者可以共存
+  # 或者也可以都开启，两者可以共存
 VITE_BUILD_COMPRESS = gzip,brotli
 ```
 
@@ -35,26 +35,26 @@ VITE_BUILD_COMPRESS = gzip,brotli
 
 在环境配置文件里设置 `VITE_BUILD_ARCHIVE` 即可在构建完后成生成 `.zip` 或 `.tar.gz` 文件。
 
-```
+```yaml
 # 生成 zip
 VITE_BUILD_ARCHIVE = zip
 
-# 生成 tar.gz
+  # 生成 tar.gz
 VITE_BUILD_ARCHIVE = tar
 ```
 
 ## 禁用浏览器开发者工具
 
-在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOLS` 即可在构建后禁用浏览器开发者工具。
+在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOL` 即可在构建后禁用浏览器开发者工具。
 
-```
+```yaml
 # 禁用开发者工具
-VITE_APP_DISABLE_DEVTOOLS = true
+VITE_APP_DISABLE_DEVTOOL = true
 ```
 
 ## 其它设置
 
-```
+```yaml
 # 是否在打包时生成 sourcemap
 VITE_BUILD_SOURCEMAP = true
 ```

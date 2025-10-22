@@ -1,4 +1,8 @@
-# FileUpload 文件上传
+# FileUpload 文件上传 <Badge type="danger" text="弃用" />
+
+:::danger 注意
+该组件已弃用，请使用 `KaFileUpload` 组件。
+:::
 
 ## Props
 

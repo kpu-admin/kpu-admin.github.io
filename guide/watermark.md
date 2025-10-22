@@ -6,13 +6,13 @@
 
 ```ts {2-8}
 const globalSettings: Settings.all = {
-  app: {
-    /**
-     * 是否开启页面水印
-     * @默认值 `false`
-     */
-    enableWatermark: true,
-  },
+    app: {
+        /**
+         * 是否开启页面水印
+         * @默认值 `false`
+         */
+        enableWatermark: true,
+    },
 }
 ```
 
@@ -28,14 +28,14 @@ const globalSettings: Settings.all = {
 
 ```vue
 <script setup lang="ts">
-const watermarkStore = useWatermarkStore()
+  const watermarkStore = useWatermarkStore()
 
-watermarkStore.update({
-  text: '设置水印',
-  // 更多设置项请查看 /src/utils/watermark.ts 中 settingsType 类型定义
-})
+  watermarkStore.update({
+    text: '设置水印',
+    // 更多设置项请查看 /src/utils/watermark.ts 中 settingsType 类型定义
+  })
 
-// 重置水印，恢复到默认设置
-watermarkStore.update()
+  // 重置水印，恢复到默认设置
+  watermarkStore.update()
 </script>
 ```

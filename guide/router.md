@@ -14,23 +14,23 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
-  path: '/example',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/example/index',
-  name: 'Example',
-  meta: {
-    title: '演示',
-  },
-  children: [
-    {
-      path: 'index',
-      name: 'ExampleIndex',
-      component: () => import('@/views/example/index.vue'),
-      meta: {
-        title: '演示页面',
-      },
+    path: '/example',
+    component: () => import('@/layouts/index.vue'),
+    redirect: '/example/index',
+    name: 'Example',
+    meta: {
+        title: '演示',
     },
-  ],
+    children: [
+        {
+            path: 'index',
+            name: 'ExampleIndex',
+            component: () => import('@/views/example/index.vue'),
+            meta: {
+                title: '演示页面',
+            },
+        },
+    ],
 }
 
 export default routes
@@ -39,7 +39,7 @@ export default routes
 :::warning 注意
 - 所有路由的 `name` 请确保唯一，不能重复
 - 一级路由的 `component` 需设置为 `() => import('@/layouts/index.vue')` ，并且 path 前面需要加 `/`，其余子路由都不要以 `/` 开头
-:::
+  :::
 
 ### 多级路由
 
@@ -51,33 +51,33 @@ export default routes
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
-  path: '/example',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/example/level/index',
-  name: 'Example',
-  meta: {
-    title: '演示',
-  },
-  children: [
-    {
-      path: 'level',
-      name: 'ExampleLevel',
-      // 无需设置 componment
-      meta: {
-        title: '中间层级',
-      },
-      children: [
-        {
-          path: 'index',
-          name: 'ExampleLevelIndex',
-          component: () => import('@/views/example/index.vue'),
-          meta: {
-            title: '演示页面',
-          },
-        },
-      ],
+    path: '/example',
+    component: () => import('@/layouts/index.vue'),
+    redirect: '/example/level/index',
+    name: 'Example',
+    meta: {
+        title: '演示',
     },
-  ],
+    children: [
+        {
+            path: 'level',
+            name: 'ExampleLevel',
+            // 无需设置 componment
+            meta: {
+                title: '中间层级',
+            },
+            children: [
+                {
+                    path: 'index',
+                    name: 'ExampleLevelIndex',
+                    component: () => import('@/views/example/index.vue'),
+                    meta: {
+                        title: '演示页面',
+                    },
+                },
+            ],
+        },
+    ],
 }
 
 export default routes
@@ -91,27 +91,27 @@ export default routes
 
 ```ts
 const asyncRoutes: Route.recordMainRaw[] = [
-  {
-    meta: {
-      title: '演示',
-      icon: 'menu-default',
+    {
+        meta: {
+            title: '演示',
+            icon: 'menu-default',
+        },
+        children: [
+            MultilevelMenuExample,
+            BreadcrumbExample,
+            KeepAliveExample,
+        ],
     },
-    children: [
-      MultilevelMenuExample,
-      BreadcrumbExample,
-      KeepAliveExample,
-    ],
-  },
-  {
-    meta: {
-      title: '其它',
-      icon: 'menu-other',
+    {
+        meta: {
+            title: '其它',
+            icon: 'menu-other',
+        },
+        children: [
+            ComponentExample,
+            PermissionExample,
+        ],
     },
-    children: [
-      ComponentExample,
-      PermissionExample,
-    ],
-  },
 ]
 ```
 
@@ -135,7 +135,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 - 默认值：`undefined`
 - 说明：导航中显示的图标
 
-该项配置最终会通过 `<KpuIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
+该项配置最终会通过 `<KaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
 
 ### activeIcon
 
@@ -143,7 +143,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 - 默认值：`undefined`
 - 说明：导航激活时显示的图标
 
-该项配置最终会通过 `<KpuIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
+该项配置最终会通过 `<KaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
 
 ### defaultOpened
 
@@ -231,7 +231,7 @@ export default routes
 :::tip 注意
 - `auths` 里需包含 `auth` 所设置的权限，否则会导致无法设置该路由的访问权限。
 - `auths` 的存放位置并不固定，可以放在任意一级路由上，但通常建议放在某个模块的入口路由上，表示该模块下所有子路由具备的可配置权限。
-:::
+  :::
 
 ```ts {8-15}
 import type { RouteRecordRaw } from 'vue-router'
@@ -275,7 +275,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-该配置的具体应用可参考专业版演示站[示例](https://kpu-admin.kpui.top/pro-example/#/pages_example/general/role)及[源码](https://github.com/kpu-admin/pro/tree/example/src/views/pages_example/role)。
+该配置的具体应用可参考专业版演示站[示例](https://kpu-admin.kpui.top/kpu-example/#/pages_example/general/role)及[源码](https://github.com/kpu-admin/web/tree/example/src/views/pages_example/role)。
 
 ### menu
 
@@ -423,7 +423,7 @@ export default routes
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面进行缓存，否则不缓存
 - `string[]` ，可设置一个目标路由的 name 数组
 
-当类型为 `string` 或 `string[]` 时，可以更精细的去控制页面缓存的逻辑。例如从列表页进入详情页，则需要将列表页进行缓存；而从列表页进入其它页面，则无需将列表页进行缓存。详细可阅读《[页面缓存](keep-alive)》。
+当类型为 `string` 或 `string[]` 时，可以更精细的去控制页面缓存的逻辑。例如从列表页进入详情页，则需要将列表页进行缓存；而从列表页进入其它页面，则无需将列表页进行缓存。详细可阅读《[页面缓存 - 基础用法](keep-alive#基础用法)》。
 
 ### noCache
 
@@ -436,7 +436,7 @@ export default routes
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面清除缓存，否则不清除缓存
 - `string[]` ，可设置一个目标路由的 name 数组
 
-该属性通常在启用标签栏合并时会使用到。详细可阅读《[页面缓存 - 标签栏开启且合并](keep-alive#标签栏开启且合并)》。
+该属性通常在启用标签栏合并时会使用到。详细可阅读《[页面缓存 - 高级用法](keep-alive#高级用法)》。
 
 ### badge
 
@@ -467,6 +467,85 @@ badge: () => globalStore.number
 ```ts
 badgeVariant: () => globalStore.status
 ```
+
+### tabMerge
+
+- 类型：`'routeName' | 'activeMenu'`
+- 默认值：`undefined`
+- 说明：标签页合并方式
+
+:::: tabs
+::: tab routeName 根据路由名称合并
+以下面这段路由配置为例：
+
+```ts {16,21}
+const routes: RouteRecordRaw = {
+  path: '/manager',
+  meta: {
+    title: '管理员管理',
+  },
+  children: [
+    {
+      path: '',
+      name: 'ManagerList'
+      meta: {
+        title: '管理员列表',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'ManagerEdit',
+      meta: {
+        title: '编辑管理员',
+        menu: false,
+        activeMenu: '/manager',
+        tabMerge: 'routeName',
+      },
+    },
+  ],
+}
+```
+
+从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，打开多个不同的详情页，只会保持一个**编辑管理员**标签页，效果如下：
+
+![](/route-meta-tabmerge-routename.gif){data-zoomable}
+:::
+::: tab activeMenu 根据激活菜单合并
+以下面这段路由配置为例：
+
+```ts {20,21}
+const routes: RouteRecordRaw = {
+  path: '/manager',
+  meta: {
+    title: '管理员管理',
+  },
+  children: [
+    {
+      path: '',
+      name: 'ManagerList'
+      meta: {
+        title: '管理员列表',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'ManagerEdit',
+      meta: {
+        title: '编辑管理员',
+        menu: false,
+        activeMenu: '/manager',
+        tabMerge: 'activeMenu',
+      },
+    },
+  ],
+}
+```
+
+从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
+
+![](/route-meta-tabmerge-activemenu.gif){data-zoomable}
+:::
+::::
 
 ### query
 
@@ -523,7 +602,7 @@ const routes: RouteRecordRaw = {
       name: 'Iframe',
       meta: {
         title: 'Gitee 仓库',
-        iframe: 'https://gitee.com/Kpu-admin/web',
+        iframe: 'https://gitee.com/kpu-admin/web',
       },
     },
   ],
@@ -563,7 +642,7 @@ const routes: RouteRecordRaw = {
       name: 'Iframe',
       meta: {
         title: 'Gitee 仓库',
-        iframe: 'https://gitee.com/Kpu-admin/web',
+        iframe: 'https://gitee.com/kpu-admin/web',
       },
     },
     {
@@ -622,7 +701,7 @@ const routes: RouteRecordRaw = {
       name: 'Link',
       meta: {
         title: 'Gitee 仓库',
-        link: 'https://gitee.com/Kpu-admin/web',
+        link: 'https://gitee.com/kpu-admin/web',
       },
     },
   ],
@@ -683,7 +762,7 @@ const constantRoutes: RouteRecordRaw[] = [
 
 在应用配置中设置：
 
-```ts {2-9}
+```ts {2-10}
 const globalSettings: Settings.all = {
   app: {
     /**

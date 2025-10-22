@@ -25,20 +25,20 @@ import api from '@/api'
 
 // GET 请求
 api.get('news/list', {
-  params: {
-    page: 1,
-    size: 10,
-  },
+    params: {
+        page: 1,
+        size: 10,
+    },
 }).then((res) => {
-  // 后续业务代码
+    // 后续业务代码
 })
 
 // POST 请求
 api.post('news/create', {
-  title: '新闻标题',
-  content: '新闻内容',
+    title: '新闻标题',
+    content: '新闻内容',
 }).then((res) => {
-  // 后续业务代码
+    // 后续业务代码
 })
 ```
 
@@ -49,6 +49,25 @@ api.post('news/create', {
 代码很简单，首先初始化 axios 对象，然后 `axios.interceptors.request.use()` 和 `axios.interceptors.response.use()` 就分别是请求和响应的拦截代码了。
 
 参考代码里只做了简单的拦截处理，例如请求的时候会自动带上 token ，响应的时候会根据错误信息判断是登录失效还是接口报错，并做相应动作。
+
+### 请求重试
+
+框架扩展了请求配置参数，只需在请求时增加 `retry` 配置项，即可开启请求重试。
+
+```ts
+api.get('news/list', {
+  retry: true,
+})
+
+api.post('news/create', {
+  title: '新闻标题',
+  content: '新闻内容',
+}, {
+  retry: true,
+})
+```
+
+默认请求重试次数为 3 次，请求间隔为 1000 毫秒，可在 `/src/api/index.ts` 文件中修改 `MAX_RETRY_COUNT` 和 `RETRY_DELAY` 的默认配置。
 
 ## 模块管理
 
@@ -69,14 +88,14 @@ api.post('news/add') // http://localhost:9000/proxy/news/add
 
 ```ts {2-9}
 server: {
-  // vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
-  proxy: {
-    '/proxy': {
-      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
-      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-      rewrite: path => path.replace(/\/proxy/, ''),
+    // vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
+    proxy: {
+        '/proxy': {
+            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
+                changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+                rewrite: path => path.replace(/\/proxy/, ''),
+        },
     },
-  },
 },
 ```
 
@@ -90,7 +109,7 @@ server: {
 import api from '@/api'
 
 api.get('/new/list', {
-  baseURL: 'http://baidu.com/', // 直接覆盖 baseURL
+    baseURL: 'http://baidu.com/', // 直接覆盖 baseURL
 })
 ```
 
@@ -119,9 +138,9 @@ api2.get('/new/list')
 
 ```ts {2}
 const api = axios.create({
-  baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy2/' : import.meta.env.VITE_APP_API_BASEURL_2,
-  timeout: 10000,
-  responseType: 'json',
+    baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy2/' : import.meta.env.VITE_APP_API_BASEURL_2,
+    timeout: 10000,
+    responseType: 'json',
 })
 ```
 
@@ -129,19 +148,19 @@ const api = axios.create({
 
 ```ts {9-13}
 server: {
-  // vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
-  proxy: {
-    '/proxy': {
-      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
-      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-      rewrite: path => path.replace(/\/proxy/, ''),
+    // vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
+    proxy: {
+        '/proxy': {
+            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
+                changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+                rewrite: path => path.replace(/\/proxy/, ''),
+        },
+        '/proxy2': {
+            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL_2,
+                changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+                rewrite: path => path.replace(/\/proxy2/, ''),
+        },
     },
-    '/proxy2': {
-      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL_2,
-      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-      rewrite: path => path.replace(/\/proxy2/, ''),
-    },
-  },
 },
 ```
 
@@ -166,28 +185,28 @@ import { faker } from '@faker-js/faker/locale/zh_CN'
 import { defineFakeRoute } from 'vite-plugin-fake-server/client'
 
 export default defineFakeRoute([
-  {
-    url: '/mock/user/list',
-    method: 'get',
-    response: () => {
-      const list: any[] = []
-      for (let i = 0; i < 50; i++) {
-        list.push({
-          id: i + 1,
-          account: faker.person.firstName(),
-          name: faker.person.fullName(),
-          sex: faker.number.int(2),
-          mobile: faker.phone.number({ style: 'international' }),
-          status: faker.datatype.boolean(),
-        })
-      }
-      return {
-        error: '',
-        status: 1,
-        data: list,
-      }
+    {
+        url: '/mock/user/list',
+        method: 'get',
+        response: () => {
+            const list: any[] = []
+            for (let i = 0; i < 50; i++) {
+                list.push({
+                    id: i + 1,
+                    account: faker.person.firstName(),
+                    name: faker.person.fullName(),
+                    sex: faker.number.int(2),
+                    mobile: faker.phone.number({ style: 'international' }),
+                    status: faker.datatype.boolean(),
+                })
+            }
+            return {
+                error: '',
+                status: 1,
+                data: list,
+            }
+        },
     },
-  },
 ])
 ```
 
@@ -204,20 +223,20 @@ export default defineFakeRoute([
 import api from '@/api'
 
 api.get('user/list', {
-  baseURL: '/mock/',
-  params: {
-    page: 1,
-    size: 10,
-  },
+    baseURL: '/mock/',
+    params: {
+        page: 1,
+        size: 10,
+    },
 }).then((res) => {
-  // 后续业务代码
+    // 后续业务代码
 })
 
 api.post('user/create', {
-  account: 'admin',
-  name: '管理员',
+    account: 'admin',
+    name: '管理员',
 }).then((res) => {
-  // 后续业务代码
+    // 后续业务代码
 })
 ```
 

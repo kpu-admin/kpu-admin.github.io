@@ -1,6 +1,6 @@
 # 替换为 Naive UI
 
-由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [Naive UI](https://www.naiveui.com/zh-CN)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/Kpu-admin/web/releases) 页面下载框架源码压缩包。
+由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [Naive UI](https://www.naiveui.com/zh-CN)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/kpu-admin/web/releases) 页面下载框架源码压缩包。
 
 专业版用户也同样，请到专业版仓库下载框架源码。
 
@@ -16,7 +16,59 @@ pnpm add naive-ui -D
 
 ## 代码调整
 
-::: details 代码
+::: details 基础版
+
+修改 `/tsconfig.app.json` 文件
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      ...
+      "element-plus/global" // [!code --]
+      "naive-ui/volar" // [!code ++]
+    ],
+    ...
+  }
+}
+```
+
+整体修改 `/src/ui/provider/index.ts` 文件
+
+```ts
+import type { App } from 'vue'
+import naive from 'naive-ui'
+
+function install(app: App) {
+  app.use(naive)
+}
+
+export default { install }
+```
+
+整体修改 `/src/ui/provider/index.vue` 文件
+
+```vue
+<script setup lang="ts">
+import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
+
+const settingsStore = useSettingsStore()
+</script>
+
+<template>
+  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.currentColorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
+    <NMessageProvider>
+      <slot />
+      <NGlobalStyle />
+    </NMessageProvider>
+  </NConfigProvider>
+</template>
+```
+
+:::
+
+::: details 专业版
 
 修改 `/tsconfig.app.json` 文件
 
@@ -92,10 +144,6 @@ const settingsStore = useSettingsStore()
 │  └─ module // 标准模块模板基于 Element Plus 开发，需要删除
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
-     ├─ FileUpload
-     ├─ ImagePreview
-     ├─ ImagesUpload
-     ├─ ImageUpload
      └─ PcasCascader
 ```
 

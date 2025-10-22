@@ -1,4 +1,4 @@
-# KpuTimeline 时间线 <Badge type="pro" text="专业版" /> <Badge text="v5.4.0" />
+# KpuTimeline 时间线
 
 ## Props
 
