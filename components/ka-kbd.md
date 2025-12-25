@@ -1,0 +1,10 @@
+---
+url: /components/ka-kbd.md
+---
+# KaKbd 键盘
+
+## Slots
+
+| 插槽名  | 说明           |
+| ------- | -------------- |
+| default | 自定义默认内容 |

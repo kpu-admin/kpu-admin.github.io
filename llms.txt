@@ -1,0 +1,175 @@
+# Kpu-admin
+
+> 杰出的管理系统框架
+
+开箱即用，提供舒适开发体验
+
+## Table of Contents
+
+### 指引
+
+- [文档说明](/guide/intro.md)
+- [为什么选择我们 ?](/guide/why.md)
+- [更新日志](/guide/changelog.md)
+
+### 入门
+
+- [准备工作](/guide/ready.md)
+- [开始](/guide/start.md)
+- [代码规范](/guide/coding-standard.md)
+- [术语](/guide/term.md)
+- [配置](/guide/configure.md)
+- [开发者工具](/guide/devtools.md)
+- [路由（导航）](/guide/router.md)
+- [与服务端交互](/guide/axios.md)
+- [全局状态管理](/guide/store.md)
+- [资源](/guide/resources.md)
+- [图标](/guide/icon.md)
+- [构建与预览](/guide/build.md)
+
+### 进阶
+
+- [登录相关](/guide/login.md)
+- [权限](/guide/permission.md)
+- [主页](/guide/home.md)
+- [布局](/guide/layout.md)
+- [主题](/guide/theme.md)
+- [动态标题](/guide/title.md)
+- [导航菜单](/guide/menu.md)
+- [顶栏](/guide/topbar.md)
+- [快捷键](/guide/hotkeys.md)
+- [版权信息](/guide/copyright.md)
+
+#### 顶栏
+
+- [标签栏](/guide/tabbar.md)
+- [工具栏](/guide/toolbar.md)
+
+### 高级
+
+- [页面缓存](/guide/keep-alive.md)
+- [国际化](/guide/i18n.md)
+- [预留插槽](/guide/slots.md)
+- [RTL 模式](/guide/rtl.md)
+- [代码文件自动生成](/guide/plop.md)
+- [常用 API](/guide/api.md)
+- [私有 Storage 数据](/guide/storage.md)
+- [首屏 Loading](/guide/loading.md)
+- [页面水印](/guide/watermark.md)
+- [反馈](/guide/feedback.md)
+- [检查更新](/guide/check-updates.md)
+- [错误日志](/guide/error-log.md)
+- [自定义字体](/guide/font.md)
+- [用户偏好设置](/guide/preferences.md)
+- [JSX](/guide/jsx.md)
+- [基于文件系统的路由](/guide/file-system-route.md)
+- [使用 Composition API 开发](/guide/vue3-composition-api.md)
+
+#### 代码文件自动生成
+
+- [标准模块](/guide/plop-module.md)
+
+#### 替换 UI 组件库
+
+- [替换为 Ant Design Vue](/guide/replace-to-antd.md)
+- [替换为 Arco Design Vue](/guide/replace-to-arco.md)
+- [替换为 Naive UI](/guide/replace-to-naive.md)
+- [替换为 TDesign](/guide/replace-to-tdesign.md)
+- [替换为 Vexip UI](/guide/replace-to-vexip.md)
+- [替换为 iDux](/guide/replace-to-idux.md)
+
+### 其它
+
+- [框架更新](/guide/upgrade.md)
+- [从 vue-element-admin 迁移](/guide/vea-to-fa.md)
+- [常见问题](/guide/q-a.md)
+
+### 组件
+
+- [介绍](/components.md)
+
+### 内建组件
+
+- [KaAnimatedBeam 动画光束](/components/ka-animated-beam.md)
+- [KaAnimatedCountTo 动画计数](/components/ka-animated-count-to.md)
+- [KaAuth 鉴权](/components/ka-auth.md)
+- [KaAvatar 头像](/components/ka-avatar.md)
+- [KaBadge 徽章](/components/ka-badge.md)
+- [KaBlurReveal 模糊显示](/components/ka-blur-reveal.md)
+- [KaButton 按钮](/components/ka-button.md)
+- [KaCard 卡片](/components/ka-card.md)
+- [KaCarousel 轮播图](/components/ka-carousel.md)
+- [KaCheckbox 复选框](/components/ka-checkbox.md)
+- [KaCodePreview 代码预览](/components/ka-code-preview.md)
+- [KaCode 代码块](/components/ka-code.md)
+- [KaCollapsible 折叠面板](/components/ka-collapsible.md)
+- [KaCountTo 计数到](/components/ka-count-to.md)
+- [KaDigitalCard 数字卡片](/components/ka-digital-card.md)
+- [KaDivider 分割线](/components/ka-divider.md)
+- [KaDrawer 抽屉](/components/ka-drawer.md)
+- [KaDropdown 下拉菜单](/components/ka-dropdown.md)
+- [KaFileUpload 文件上传](/components/ka-file-upload.md)
+- [KaFixedActionBar 固定底部操作栏](/components/ka-fixed-action-bar.md)
+- [KaFlipCard 翻转卡片](/components/ka-flip-card.md)
+- [KaFlipWords 翻转文字](/components/ka-flip-words.md)
+- [KaGlowyCard 发光卡片](/components/ka-glowy-card.md)
+- [KaGradientButton 渐变按钮](/components/ka-gradient-button.md)
+- [KaHoverCard 悬浮卡片](/components/ka-hover-card.md)
+- [KaIcon 图标](/components/ka-icon.md)
+- [KaImagePreview 图片预览](/components/ka-image-preview.md)
+- [KaImageUpload 图片上传](/components/ka-image-upload.md)
+- [KaIconPicker 图标选择器](/components/ka-icon-picker.md)
+- [KaInput 输入框](/components/ka-input.md)
+- [KaInteractiveButton 交互式按钮](/components/ka-interactive-button.md)
+- [KaKbd 键盘](/components/ka-kbd.md)
+- [KaLayoutContainer 布局容器](/components/ka-layout-container.md)
+- [KaLinkPreview 链接预览](/components/ka-link-preview.md)
+- [KaLoading 加载遮罩](/components/ka-loading.md)
+- [KaMarquee 跑马灯](/components/ka-marquee.md)
+- [KaModal 弹窗](/components/ka-modal.md)
+- [KaPageHeader 页头](/components/ka-page-header.md)
+- [KaPageMain 内容块](/components/ka-page-main.md)
+- [KaPagination 分页](/components/ka-pagination.md)
+- [KaParticlesBg 粒子背景](/components/ka-particles-bg.md)
+- [KaPasswordStrength 密码强度](/components/ka-password-strength.md)
+- [KaPatternBg 图案背景](/components/ka-pattern-bg.md)
+- [KaPinInput 数字输入框](/components/ka-pin-input.md)
+- [KaPopover 浮动面板](/components/ka-popover.md)
+- [KaProgress 进度条](/components/ka-progress.md)
+- [KaScratchOff 刮刮乐](/components/ka-scratch-off.md)
+- [KaScrollArea 滚动区域](/components/ka-scroll-area.md)
+- [SearchBar 搜索面板](/components/ka-search-bar.md)
+- [KaSelect 选择器](/components/ka-select.md)
+- [KaSlider 滑块](/components/ka-slider.md)
+- [KaSmoothSwipe 平滑滑动](/components/ka-smooth-swipe.md)
+- [KaSparklesText 闪烁文字](/components/ka-sparkles-text.md)
+- [KaSparkline 迷你图](/components/ka-sparkline.md)
+- [KaSpotlightCard 聚光卡片](/components/ka-spotlight-card.md)
+- [KaStorageBox 储物箱](/components/ka-storage-box.md)
+- [KaSwitch 开关](/components/ka-switch.md)
+- [KaTabs 标签页](/components/ka-tabs.md)
+- [KaTextHighlight 文字高亮](/components/ka-text-highlight.md)
+- [KaTimeAgo 可阅读时间](/components/ka-time-ago.md)
+- [KaTimeline 时间线](/components/ka-timeline.md)
+- [KaTooltip 文字提示](/components/ka-tooltip.md)
+- [KaTree 树形控件](/components/ka-tree.md)
+- [KaToast 轻提示](/components/ka-toast.md)
+- [KaTrend 趋势标记](/components/ka-trend.md)
+
+### 扩展组件
+
+- [ImageUpload 单图上传&#x20;](/components/image-upload.md)
+- [ImagesUpload 多图上传&#x20;](/components/images-upload.md)
+- [FileUpload 文件上传&#x20;](/components/file-upload.md)
+- [ImagePreview 图片预览&#x20;](/components/image-preview.md)
+- [PcasCascader 省市区街道联动](/components/pcas-cascader.md)
+
+- [定制开发](/customize.md)
+- [技术支持](/support.md)
+- [交换友链](/links.md)
+
+### Other
+
+- [KaBorderBeam 边框光束](/components/ka-border-beam.md)
+- [KaMultiStepLoader 多步骤加载器](/components/ka-multi-step-loader.md)
+- [KaTextarea 文本域](/components/ka-textarea.md)
