@@ -1,0 +1,32 @@
+{
+  "name": "kpu-admin-docs-vitepress",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "lint:eslint": "eslint . --cache --fix",
+    "taze": "taze minor -wIr"
+  },
+  "dependencies": {
+    "@vueuse/core": "^14.1.0",
+    "clsx": "^2.1.1",
+    "medium-zoom": "^1.1.0",
+    "motion-v": "^1.7.4",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "4.3.0",
+    "@iconify/json": "^2.2.417",
+    "@red-asuka/vitepress-plugin-tabs": "^0.0.4",
+    "@unocss/eslint-plugin": "66.1.0-beta.5",
+    "eslint": "^9.39.2",
+    "sass": "^1.97.0",
+    "taze": "^19.9.2",
+    "unocss": "66.1.0-beta.5",
+    "unocss-preset-animations": "^1.3.0",
+    "vitepress": "1.6.3",
+    "vitepress-plugin-llms": "^1.9.3",
+    "vue": "^3.5.25",
+    "vue3-tabs-component": "^1.3.7"
+  }
+}

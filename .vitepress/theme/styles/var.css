@@ -1,0 +1,118 @@
+/* 侧边栏 */
+:root {
+  --vp-sidebar-width: 294px;
+}
+/* 字体 */
+:root {
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, 'Fira Code', 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+/* 首页 */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    30deg,
+    #42B883 70%,
+    #35495E
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    115deg,
+    #42B883 30%,
+    #35495E 50%
+  );
+  --vp-home-hero-image-filter: blur(96px);
+}
+.dark {
+  --vp-home-hero-image-background-image: linear-gradient(
+    115deg,
+    #42B883 30%,
+    #35495E 10%
+  );
+}
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(96px);
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(128px);
+  }
+}
+.VPFeature {
+  position: relative;
+}
+.VPFeature .icon {
+  margin-bottom: 8px;
+}
+.VPFeature .title {
+  position: absolute;
+  top: 36px;
+  left: 85px;
+  font-size: 18px;
+}
+/* 自定义代码块 */
+.custom-block.details summary {
+  cursor: pointer;
+}
+.github-release-tag {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 6px;
+  margin-left: 6px;
+  color: var(--vp-button-brand-text);
+  background-color: var(--vp-button-brand-bg);
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.pure-tag {
+  position: relative;
+  left: -86px;
+  top: -30px;
+  display: inline-block;
+  line-height: 1;
+  background: var(--vp-home-hero-name-background);
+  background-clip: text;
+  font-size: 18px;
+  transform-origin: bottom center;
+  animation: swing 2s ease infinite;
+}
+@media (max-width: 960px) {
+  .pure-tag {
+    display: none;
+  }
+}
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+/* medium-zoom */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+.medium-zoom-image {
+  z-index: 30;
+}
+a.cta {
+  text-align: center;
+  border-radius: 8px;
+}
+a.cta:hover {
+  border-color: var(--vp-c-brand);
+  background-color: var(--c-bg-accent);
+}
+a.cta.buy {
+  border-color: goldenrod;
+}
